@@ -1,0 +1,13 @@
+n = int(input())
+
+myd = {}
+
+for i in range(n):
+    Key = input()
+    if Key in myd:
+        myd[Key] += 1
+    else :
+        myd[Key] = 1
+
+print(len(myd))
+print(*myd.values())
