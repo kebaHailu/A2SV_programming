@@ -1,0 +1,9 @@
+# to take input
+num = input().split()
+me = input().split()
+# and also for sets
+good = set(input().split
+bad = set(input().split())
+# lastly using sum method we can done with only one line
+print(sum((i in good)-(i in bad) for i in me))
+ 
