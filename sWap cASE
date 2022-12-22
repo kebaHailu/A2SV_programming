@@ -1,0 +1,13 @@
+def swap_case(s):
+    
+    myst = []
+    for i in s:
+        if i == i.upper():
+            myst.append(i.lower()) 
+        elif i == i.lower():
+            myst.append(i.upper())
+        else :
+            myst.append(i)
+    return ''.join(myst)
+
+if __name__ == '__main__':
