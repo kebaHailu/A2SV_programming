@@ -1,0 +1,12 @@
+A = set(map(int,input().split()))
+n = int(input()) 
+bol = False
+for i in range(n):
+    B = set(map(int,input().split()))
+    if A != B and A.issuperset(B):
+        bol = True
+        
+    else :
+        bol = False 
+        
+print(bol)
