@@ -1,0 +1,12 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+from collections import defaultdict
+
+A = defaultdict(list)
+n, m = map(int, input().split())
+for i in range(n):
+    y = input()
+    A[y].append(i+1)
+for j in range(m):
+    x = input()
+    l = A[x]
+    print(*l) if l else print(-1)
