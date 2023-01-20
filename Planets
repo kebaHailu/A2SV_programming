@@ -1,0 +1,10 @@
+from collections import Counter 
+for _ in range(int(input())):
+    
+    n , c = list(map(int,input().split()))
+    o = Counter(input().split())
+    ret = 0
+    
+    for planet in o.values():
+        ret += min(planet,c)
+    print(ret)
