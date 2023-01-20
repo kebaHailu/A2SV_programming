@@ -1,0 +1,11 @@
+for _ in range(int(input())) :
+    first , second = input().split()
+    
+    if first[-1] == second[-1] and len(first) == len(second) :
+        print("=")
+    elif ((first[-1] == 'S' or first[-1] == 'M') and second[-1] == 'L' ) or (first[-1] == 'S' and second[-1] == 'M' ):
+        print("<")
+    elif (((first[-1] == second[-1] and second[-1]=='L') and len(first) < len(second)) or ((first[-1] == second[-1] and second[-1]=='S') and len(first) > len(second)) ):
+        print("<")
+    else:
+        print(">")
