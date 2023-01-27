@@ -1,0 +1,8 @@
+n , m = map(int,input().split())
+arr_n = list(map(int,input().split()))
+arr_m = list(map(int,input().split()))
+
+newlist = sorted(arr_n + arr_m)
+
+
+print(*newlist)
