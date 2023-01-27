@@ -1,11 +1,11 @@
-for _ in range(int(input())):
-    n = int(input())
-    arr = list(map(int,input().split()))
-    
-    if len(arr) < 2 :
-        print("YES")
-    elif all([abs(arr[i]-arr[i+1])<2 for i in range(len(arr)-1)]):
-        print("YES")
-    else:
-        print("NO")
-    
+
+class Solution:
+    def arraySortedOrNot(self, arr, n):
+        i = 0
+        j = 1
+        while j < n:
+            if arr[i] > arr[j] :
+                return 0
+            i += 1
+            j += 1
+        return 1
