@@ -1,0 +1,11 @@
+for _ in range(int(input())):
+    n = int(input())
+    arr = list(map(int,input().split()))
+    
+    if len(arr) < 2 :
+        print("YES")
+    elif all([abs(arr[i]-arr[i+1])<2 for i in range(len(arr)-1)]):
+        print("YES")
+    else:
+        print("NO")
+    
