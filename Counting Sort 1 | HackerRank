@@ -1,0 +1,14 @@
+
+def countingSort(arr):
+    # Write your code here
+    new_arr = [0]*100
+    
+    for i in arr:
+        if new_arr[i] == 0:
+            new_arr[i] = 1
+        else:
+            new_arr[i] += 1
+        
+        
+    
+    return new_arr
