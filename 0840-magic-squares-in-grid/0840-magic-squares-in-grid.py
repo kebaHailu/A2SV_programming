@@ -17,11 +17,11 @@ class Solution:
                 return True
             return False
         
-        s={1,2,3,4,5,6,7,8,9}
+        nums={1,2,3,4,5,6,7,8,9}
         for i in range(len(grid)-2):
             for j in range(len(grid[0])-2):
-                gr=[grid[r][j:j+3] for r in range(i,i+3)]
-                if set([gr[k][l] for k in range(3) for l in range(3)])==s:
-                    if checker(gr):
+                gridsall=[grid[r][j:j+3] for r in range(i,i+3)]
+                if set([gridsall[k][l] for k in range(3) for l in range(3)])==nums:
+                    if checker(gridsall):
                         count+=1
         return count
