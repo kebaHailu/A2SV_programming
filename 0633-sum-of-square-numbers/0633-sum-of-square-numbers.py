@@ -2,7 +2,7 @@ class Solution:
     def judgeSquareSum(self, c: int) -> bool:
 
         i = 0 
-        j = 50000
+        j = int(c ** 0.5)
 
         while j > i:
             if i * i + j * j == c: 
