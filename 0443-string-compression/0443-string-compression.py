@@ -1,19 +1,19 @@
 class Solution:
     def compress(self, chars: List[str]) -> int:
         chars.append("")
-        t = 0
+        count = 0
         prev = chars[0]
         ans = ""
         
         for i in chars:
             if i == prev:
-                t += 1
-            elif t == 1:
+                count += 1
+            elif count == 1:
                 ans += prev
-                t = 1
+                count = 1
             else:
-                ans += prev + str(t)
-                t = 1
+                ans += prev + str(count)
+                count = 1
             
             prev = i
             
