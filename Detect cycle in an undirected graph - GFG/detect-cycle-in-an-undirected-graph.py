@@ -15,12 +15,12 @@ class Solution:
 		        cur , parent = queue.popleft()
 		        for val in adj[cur]:
 		            if val in visited and val != parent:
-		                return 1
+		                return True
 		            elif val not in visited:
 		                queue.append((val , cur))
                         visited.add(val)
                         
-        return 0
+        return False
 		    
 
 
