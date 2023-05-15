@@ -7,18 +7,18 @@ class Solution:
 	
 		visited = set()
 		queue = deque()
-		for vertix in range(V):
-		    if vertix not in visited:
-		        queue.append((vertix , -1))
-		        visited.add(vertix)
+		for i in range(V):
+		    if i not in visited:
+		        queue.append((i , -1))
+		        visited.add(i)
 		    while queue:
-		        cur , parent = queue.popleft()
-		        for val in adj[cur]:
-		            if val in visited and val != parent:
+		        node , parent = queue.popleft()
+		        for child in adj[node]:
+		            if child in visited and child != parent:
 		                return True
-		            elif val not in visited:
-		                queue.append((val , cur))
-                        visited.add(val)
+		            elif child not in visited:
+		                queue.append((child , node))
+                        visited.add(child)
                         
         return False
 		    
